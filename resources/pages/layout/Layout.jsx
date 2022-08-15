@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { NavBar } from "../containers/NavBar";
-import { Dashboard } from "../Dashboard";
 import { List } from "../List";
 import { MainView } from "../containers/MainView";
+import { CreatePost } from "../CreatePost";
 
 const Layout = () => {
 
   // const navigateRoute = useNavigate();
   const routes = {
     pages: {
-      dashboard: {
-        url: '/dashboard',
-        component: Dashboard
+      create: {
+        url: '/api/createPost',
+        component: CreatePost
       },
       list: {
         url: '/api/posts',
@@ -21,7 +21,7 @@ const Layout = () => {
   };
 
   // Control the active page from here
-  const [activePage, setActivePage] = useState('dashboard'),
+  const [activePage, setActivePage] = useState('create'),
     [activePageData, setActivePageData] = useState(null);
 
   // Change the active page

@@ -23,6 +23,7 @@ export const NavButton = (props) => {
       "data-url": props.link,
       "data-method": props.method,
       'data-page': props.page,
+      type: props.action || 'button',
       ref: thisNavButton,
     },
     props.children
@@ -36,7 +37,8 @@ export const NavButton = (props) => {
 NavButton.defaultProps = {
   method: 'get',
   as: 'button',
-  label: 'newButton'
+  label: 'newButton',
+  action: 'button'
 }
 
 NavButton.propTypes = {
@@ -44,6 +46,7 @@ NavButton.propTypes = {
   link: PropTypes.string,
   label: PropTypes.string,
   classes: PropTypes.string,
+  action: PropTypes.string,
   method: (props, propName, componentName) => {
     if (!/^(get|post|put|delete)$/i.test(props[propName])) {
       throw new Error(`${componentName}: "action" attribute must be GET/POST/PUT/DELETE`)

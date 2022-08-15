@@ -1,0 +1,157 @@
+body {
+  #app {
+
+    & .table {
+      border: 0.2rem solid var(--main-hightlight-1);
+      border-radius: 0.2rem;
+
+      & header {
+        padding: 0.5rem 0;
+        background-color: var(--main-hightlight-1);
+      }
+
+      &.posts > header,
+      &.posts .table-entry {
+        display: grid;
+        grid-column-gap: 0.5rem;
+        grid-template-columns: 25% 25% auto;
+        align-items: center;
+      }
+
+      & .table-entry {
+        margin: 0.5rem 0;
+        padding: 0.5rem 0;
+
+        &:not(:first-child) {
+          border-top: 2px solid var(--main-hightlight-1)
+        }
+
+        & .table-cell {
+          position: relative;
+        }
+      }
+
+      & .modal {
+        display: none;
+        position: absolute;
+        background-color: var(--modal-background);
+        border: 2px solid var(--modal-highlight);
+        border-radius: 0.2rem;
+        box-shadow: 0px 0px 4px var(--modal-highlight);
+        left: 50%;
+        transform: translateX(calc(-50% - 12rem));
+        z-index: +10;
+
+        & > header {
+          background-color: var(--modal-highlight);
+          padding: 0.25rem 2rem;
+        }
+
+        & > form {
+          padding: 1rem 2rem;
+        }
+        & > form input {
+          display: block;
+          margin: 1rem auto;
+          width: 5rem;
+          text-align: center;
+          font-size: 1rem;
+        }
+
+        & > footer {
+          display: flex;
+          justify-content: space-around;
+          background-color: var(--modal-highlight);
+          padding: 0.5rem 2rem;
+
+          & > .nav-button {
+            margin: 0;
+            font-size: 1rem;
+            cursor: pointer;
+          }
+        }
+
+        & .modal span {
+          cursor: default;
+          display: block;
+        }
+      }
+    }
+
+    & .container.new-post {
+
+      & form {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr 1.5fr;
+        margin: 0.5rem;
+        justify-items: center;
+        border: 2px solid var(--main-hightlight-1);
+        width: auto;
+      }
+    }
+
+    & .input-group {
+      display: grid;
+      width: 90%;
+      margin: 1rem 1rem 3rem 1rem;
+      position: relative;
+
+      & span {
+        margin-bottom: 0.5rem;
+      }
+
+      &[data-id="message"] {
+        grid-column: 1 / 4;
+        width: 50%;
+      }
+      &[data-id="message"] textarea {
+        width: auto;
+        resize: none;
+      }
+      &[data-id="pin"] input {
+        width: 6rem;
+        margin: auto;
+      }
+
+      & input,
+      textarea {
+        text-align: center;
+        padding: 0.25rem 0;
+        border-radius: 0.2rem;
+        background-color: var(--input-background);
+        border: 2px solid var(--main-hightlight-2);
+        font-size: 1.1rem;
+        font-family: sans-serif;
+      }
+
+      & input:invalid,
+      textarea:invalid {
+        outline: 1px solid var(--input-invalid);
+      }
+
+      & input:focus,
+      textarea:focus {
+        outline: 1px solid var(--navbar-button-hover);
+      }
+
+      & .validation-error {
+        position: absolute;
+        font-size: 1rem;
+        color: #c06969;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+      }
+
+    }
+    
+    & .nav-button.submit-post {
+      border: 1px solid var(--navbar-button-hover)!important;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      grid-column: 1 / 4;
+    }
+  }
+}

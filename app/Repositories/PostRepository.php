@@ -33,9 +33,21 @@ class PostRepository implements PostInterface
   public function getById($id): ?Post
   {
     $post = Post::where('id', $id)
-      ->first()
-      ->get();
+      ->first();
     return $post;
+  }
+
+  public function create(array $postData): ?Post
+  {
+    $newPost = new Post;
+    $newPost->fill($postData);
+    // $newPost->username = $postData['username'];
+    // $newPost->email = $postData['email'];
+    // $newPost->pin = $postData['pin'];
+    // $newPost->message = $postData['message'];
+    $newPost->created_at = now(); 
+    $newPost->save();
+    return $newPost;
   }
 
 }

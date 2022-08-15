@@ -10,7 +10,7 @@ export const List = (props) => {
 
   return (
     <>
-      <div className="container">List of Posts</div>
+      <div className="container"><h3>List of Posts</h3></div>
       {posts.length
         ? <div className="container post-table"><PostTable postData={posts}/></div>
         : <div className="container"><span>There&apos;s nothing to see here. Try adding a post!</span></div>

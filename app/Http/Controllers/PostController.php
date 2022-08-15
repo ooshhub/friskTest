@@ -18,6 +18,7 @@ class PostController extends Controller
   {
     $this->postRepository = $postRepository;
     $this->postService = $postService;
+
   }
 
   public function getPostList(): Collection
@@ -25,9 +26,19 @@ class PostController extends Controller
     return $this->postRepository->getList();
   }
 
-  public function getPostComment(Request $request): array
+  public function getPostComment(Request $request, mixed $id): array
   {
-    ddd($request);
-    // return $this->postService->getPostComment();
+    $pin = $request->input('pin');
+    if ($pin && $id) {
+      $response = $this->postService->getPostComment($id, $pin);
+      return $response;
+    }
+    else return ['error' => 'something went wrong'];
+  }
+
+  public function submitPost(Request $request)
+  {
+    $returnData = $this->postService->validateAndCreatePost($request);
+    return $returnData;
   }
 }

@@ -20,7 +20,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/posts', [PostController::class, 'getPostList']);
-// Route::get('/posts', fn() => ['stuff' => 'things']);
-Route::post('/comment/{id}', [PostController::class, 'getComment']);
+Route::get('/createPost', fn() => ['data' => 'null']);
+Route::post('/comment/{id}', [PostController::class, 'getPostComment']);
+Route::post('/submitPost', [PostController::class, 'submitPost']);
 
 Route::fallback(fn(Request $request) => ['404' => $request]);

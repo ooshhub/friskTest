@@ -214,7 +214,8 @@ class Request {
       page: requestData.page || '',
       method: requestData.method ? /^(get|put|post|delete)$/i.test(requestData.method) ? requestData.method : null : 'get',
       timeout: parseInt(requestData.timeout) > 0 ? requestData.timeout : null,
-      useProgress: requestData.progress == null ? true : !!requestData.progress
+      useProgress: requestData.progress == null ? true : !!requestData.progress,
+      data: requestData.data ?? {}
     };
     if (!output.url || !output.method) return null;
     else return output;

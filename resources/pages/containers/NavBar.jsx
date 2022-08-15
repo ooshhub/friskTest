@@ -16,13 +16,13 @@ export const NavBar = (props) => {
       <div className="logo">
         <div className="outer">
           <div className="inner">
-            <div className="text"></div>
+            <div className="text">48</div>
           </div>
         </div>
       </div>
       <div className="navbuttons">
-        <NavButton link="/dashboard" page='dashboard' active={props.currentPage} onNavClick={handleNavClick}>Home</NavButton>
-        <NavButton link="/api/posts" page='list' active={props.currentPage} onNavClick={handleNavClick}>Post List</NavButton>
+        <NavButton link="/api/createPost" page='create' active={props.currentPage} onNavClick={handleNavClick}>Create Post</NavButton>
+        <NavButton link="/api/posts" page='list' active={props.currentPage} onNavClick={handleNavClick}>List Posts</NavButton>
       </div>
     </nav>
   )
