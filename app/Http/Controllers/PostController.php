@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Interfaces\PostInterface;
 use App\Repositories\PostRepository;
 use App\Services\PostService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class PostController extends Controller
 {
@@ -40,5 +42,11 @@ class PostController extends Controller
   {
     $returnData = $this->postService->validateAndCreatePost($request);
     return $returnData;
+  }
+
+  public function getPostSummary()//: JsonResponse
+  {
+    $csvData = $this->postService->getMessageCountByEmail();
+    return $csvData->toJson(); //response()->json($csvData);
   }
 }

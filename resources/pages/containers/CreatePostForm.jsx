@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 
 export const CreatePostForm = () => {
 
-  const [username, setUsername] = useState('sdg'),
-    [email, setEmail] = useState('dfgd'),
-    [pin, setPin] = useState('1234'),
-    [message, setMessage] = useState('sdfg');
+  const [username, setUsername] = useState(''),
+    [email, setEmail] = useState(''),
+    [pin, setPin] = useState(''),
+    [message, setMessage] = useState('');
 
   const [errors, setErrors] = useState({});
 

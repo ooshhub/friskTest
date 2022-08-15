@@ -3,10 +3,11 @@ import { NavBar } from "../containers/NavBar";
 import { List } from "../List";
 import { MainView } from "../containers/MainView";
 import { CreatePost } from "../CreatePost";
+import { Options } from "../Options";
 
 const Layout = () => {
 
-  // const navigateRoute = useNavigate();
+  // 
   const routes = {
     pages: {
       create: {
@@ -17,6 +18,10 @@ const Layout = () => {
         url: '/api/posts',
         component: List
       },
+      options: {
+        url: '/api/options',
+        component: Options
+      }
     }
   };
 

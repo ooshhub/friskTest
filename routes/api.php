@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/posts', [PostController::class, 'getPostList']);
 Route::get('/createPost', fn() => ['data' => 'null']);
+Route::get('/csvSummary', [PostController::class, 'getPostSummary']);
+
 Route::post('/comment/{id}', [PostController::class, 'getPostComment']);
 Route::post('/submitPost', [PostController::class, 'submitPost']);
 

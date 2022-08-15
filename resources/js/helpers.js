@@ -9,5 +9,13 @@ export class Helpers {
       classes: Array.from(classes)?.map(v => v[1]),
     }
   }
+
+  static saveTextToFile(text, filename) {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL( new Blob([text], { type:`text/plain` }) );
+    a.download = filename;
+    a.click();
+    a.remove();
+  }
   
 }

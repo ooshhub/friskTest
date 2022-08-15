@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\Post;
 use App\Repositories\PostRepository;
 use App\Validators\PostValidator;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 class PostService {
@@ -40,5 +41,13 @@ class PostService {
       $newPost = $this->postRepository->create($validData['data']);
       return ['id' => $newPost->id];
     }
+  }
+
+  public function getMessageCountByEmail()
+  {
+    $all = $this->postRepository->getAll();
+    return $all
+      ->groupBy('email')
+      ->reduce(fn($out, $postGroup, $postKey) => $out->push($postKey, $postGroup->count()), collect());
   }
 }

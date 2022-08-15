@@ -23,6 +23,7 @@ export const NavBar = (props) => {
       <div className="navbuttons">
         <NavButton link="/api/createPost" page='create' active={props.currentPage} onNavClick={handleNavClick}>Create Post</NavButton>
         <NavButton link="/api/posts" page='list' active={props.currentPage} onNavClick={handleNavClick}>List Posts</NavButton>
+        <NavButton link="/api/options" page='options' active={props.currentPage} onNavClick={handleNavClick}>Options</NavButton>
       </div>
     </nav>
   )
