@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TrackController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/posts', [PostController::class, 'getPostList']);
 Route::get('/createPost', fn() => ['data' => 'null']);
 Route::get('/csvSummary', [PostController::class, 'getPostSummary']);
+
+Route::get('/test/{any}', [TrackController::class, 'postTrackerData']);
 
 Route::post('/comment/{id}', [PostController::class, 'getPostComment']);
 Route::post('/submitPost', [PostController::class, 'submitPost']);

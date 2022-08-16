@@ -4,6 +4,7 @@
 :root {
 	--main-background: #171719;
 	--main-hightlight-1: #39393f;
+	--main-hightlight-2: #555565;
 	
 	--container-background: #29292f;
 	
@@ -19,6 +20,9 @@
 	--navbar-button-hover: #7b7ae5;
 	
 	--text-color: whitesmoke;
+	
+	--input-background: #dfdfe8;
+	--input-invalid: #b13d3d;
 }
 
 body {
@@ -53,5 +57,15 @@ body {
       background-color: var(--container-background);
     }
 
+    /* Tracker testing */
+    .pixel {
+      opacity: 0;
+      height: 0px;
+      width: 0px;
+      z-index: -10;
+      position: absolute;
+      pointer-events: none;
+    }
+    
   }
 }

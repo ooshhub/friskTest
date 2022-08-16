@@ -17,5 +17,13 @@ export class Helpers {
     a.click();
     a.remove();
   }
+
+  static stringToBase64(str) {
+    return encodeURIComponent(window.btoa(str));
+  }
+
+  static base64ToString(str) {
+    return window.atob(decodeURIComponent(str));
+  }
   
 }
