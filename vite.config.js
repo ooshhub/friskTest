@@ -12,4 +12,7 @@ export default defineConfig({
       include: "**/*.jsx",
     }),
   ],
+  server: {
+    https: true
+  }
 });
