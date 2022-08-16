@@ -30,7 +30,7 @@ on('ready', () => {
             updatedBar = true;
           }
           if (!updatedBar) {
-            console.log('attribute was not found on any token bar');
+            // console.log('attribute was not found on any token bar');
             if (config.overwriteBadBars) token.set({
               [`${barNumber}_value`]: newValue,
               [`${barNumber}_link`]: attributeId,
