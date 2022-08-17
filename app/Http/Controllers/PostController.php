@@ -50,7 +50,7 @@ class PostController extends Controller
     return $returnData;
   }
 
-  public function getPostSummary(): JsonResponse
+  public function getPostSummary()
   {
     $csvData = $this->postService->getMessageCountByEmail();
     return $csvData->toJson();
