@@ -7,7 +7,11 @@ use App\Models\Post;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
-use Request;
+/**
+ * Basic Repository for Post
+ * Not extended from base repository as only one Model/Table required
+ * Inject => Post model
+ */
 
 class PostRepository implements PostInterface
 {
@@ -41,10 +45,6 @@ class PostRepository implements PostInterface
   {
     $newPost = new Post;
     $newPost->fill($postData);
-    // $newPost->username = $postData['username'];
-    // $newPost->email = $postData['email'];
-    // $newPost->pin = $postData['pin'];
-    // $newPost->message = $postData['message'];
     $newPost->created_at = now(); 
     $newPost->save();
     return $newPost;

@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
+ * 
+ * Basic seeding for posts using Faker library
+ * 
  */
 class PostFactory extends Factory
 {

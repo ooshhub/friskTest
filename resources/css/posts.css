@@ -125,10 +125,10 @@ body {
         font-family: sans-serif;
       }
 
-      & input:invalid,
-      textarea:invalid {
+      & input:invalid:not(:placeholder-shown),
+      textarea:invalid:not(:placeholder-shown) {
         outline: 1px solid var(--input-invalid);
-      }
+      }     
 
       & input:focus,
       textarea:focus {

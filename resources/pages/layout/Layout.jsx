@@ -1,3 +1,7 @@
+/**
+ * Control main view from Navbar button calls
+ */
+
 import { useState } from "react";
 import { NavBar } from "../containers/NavBar";
 import { List } from "../List";
@@ -7,7 +11,8 @@ import { Options } from "../Options";
 
 const Layout = () => {
 
-  // 
+  // Define main page views with API routes.
+  // keyname must match page name in matching NavBar => NavButton
   const routes = {
     pages: {
       create: {

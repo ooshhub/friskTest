@@ -1,3 +1,8 @@
+/**
+ * Row entry for PostTable - write one post to the table
+ * 
+ */
+
 import PropTypes from 'prop-types';
 import { SpoilerInput } from './SpoilerInput';
 

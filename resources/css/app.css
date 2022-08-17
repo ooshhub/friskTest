@@ -1,5 +1,6 @@
 @import './navbar.css';
 @import './posts.css';
+@import './options.css';
 
 :root {
 	--main-background: #171719;
@@ -20,6 +21,7 @@
 	--navbar-button-hover: #7b7ae5;
 	
 	--text-color: whitesmoke;
+  --text-faded: #cacaca;
 	
 	--input-background: #dfdfe8;
 	--input-invalid: #b13d3d;

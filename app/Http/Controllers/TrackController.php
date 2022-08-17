@@ -15,6 +15,6 @@ class TrackController extends Controller
       $newTrack->detail = $decodedData;
       $newTrack->save();
       return response()
-        ->file(public_path("fremen.png"));
+        ->file(public_path("test.png"));
     }
 }

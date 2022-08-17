@@ -8,6 +8,12 @@ use App\Validators\PostValidator;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
+/**
+ * Main Service class for app
+ * Handle business logic
+ * Inject => Validator to handle validation on behalf of Controller
+ */
+
 class PostService {
 
   private $postRepository;

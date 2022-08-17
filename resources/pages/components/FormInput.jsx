@@ -1,3 +1,11 @@
+/**
+ * Form input elements, with state passed to container
+ * and conditional validation error span
+ * TODO: not all elements are accounted for, as not all were needed
+ */
+
+
+
 import PropTypes from 'prop-types';
 import { createElement } from 'react';
 
@@ -7,6 +15,7 @@ export const FormInput = (props) => {
     ['text', 'number', 'email'].includes(props.inputType) ? 'input' : props.inputType,
     {
       ...props.validation,
+      placeholder: props.placeholder,
       name: props.inputName,
       value: props.inputValue,
       onChange: props.onChange,
@@ -37,5 +46,6 @@ FormInput.propTypes = {
   onChange: PropTypes.func,
   required: PropTypes.string,
   validation: PropTypes.object,
+  placeholder: PropTypes.string,
   errors: PropTypes.object
 }

@@ -1,3 +1,8 @@
+/**
+ * Container for main page view
+ * Page list dictated by Layout.jsx
+ */
+
 import PropTypes from "prop-types";
 import { createElement, useEffect, useState } from "react";
 
@@ -9,7 +14,7 @@ export const MainView = (props) => {
 
   // When Layout changes the activePage, render the main view
   const renderCurrentPage = () => {
-    console.log(`Rendering new mainview...`, props.activePage);
+    // console.log(`Rendering new mainview...`, props.activePage);
     const page = pages[props.activePage];
     if (page) {
       setCurrentPage(() => {

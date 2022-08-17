@@ -1,3 +1,9 @@
+/**
+ * Container for listing current posts in the database
+ * TODO: pagination -> handle from Laravel API route with Laravel pagination
+ * 
+ */
+
 import PropTypes from 'prop-types';
 import { PostEntry } from '../components/PostEntry';
 
