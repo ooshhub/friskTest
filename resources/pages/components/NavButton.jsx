@@ -9,8 +9,6 @@ import { createElement, createRef, useEffect } from 'react';
 
 export const NavButton = (props) => {
 
-  console.log(props.active, props.page);
-
   const additionalClasses = props.classes?.split(/\s+/g),
     classList = ['nav-button', ...additionalClasses||[]];
 

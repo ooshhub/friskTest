@@ -37,7 +37,7 @@ const Layout = () => {
   // Change the active page
   const handlePageChange = async (pageUrl, pageName) => {
     const response = await window.ooxios.getRequest({ url: pageUrl, page: pageName });
-    console.info(response);
+    // console.info(response);
     if (routes.pages[pageName]?.url === response.config.url) {
       setActivePageData(response.data);
       setActivePage(pageName);
