@@ -50,7 +50,7 @@ export const CreatePostForm = () => {
       setEmail(() => '');
       setPin(() => '');
       setMessage(() => '');
-      alert(`Form ${response.data.id} submitted!`);
+      alert(`Post was submitted!`);
     }
   }
 
