@@ -52,8 +52,12 @@ class PostService {
   public function getMessageCountByEmail()
   {
     $all = $this->postRepository->getAll();
-    return $all
+    $grouped = $all
       ->groupBy('email')
-      ->reduce(fn($out, $postGroup, $postKey) => $out->push($postKey, $postGroup->count()), collect());
+      ->reduce(fn($out, $postGroup, $postKey) => $out->push([$postKey, $postGroup->count()]), collect());
+    $string = $grouped
+      ->map(fn($arr) => $arr[0].', '.$arr[1])
+      ->join("\n");
+    return $string;
   }
 }

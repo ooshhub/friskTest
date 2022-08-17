@@ -12,10 +12,8 @@ export const Options = () => {
     const response = await window.ooxios.getRequest({
       url: '/api/csvSummary'
     }).catch(e => console.error(e));
-    
-    if (response.data && Array.isArray(response.data)) {
-      const csvString = response.data.join(', ');
-      Helpers.saveTextToFile(csvString, `Post Summary.csv`);
+    if (response.data && typeof(response.data) === 'string') {
+      Helpers.saveTextToFile(response.data, `Post Summary.csv`);
     }
   }
 
