@@ -1,3 +1,8 @@
+/**
+ * Create post page layout (default page)
+ * 
+ */
+
 import PropTypes from 'prop-types';
 import { CreatePostForm } from './containers/CreatePostForm';
 

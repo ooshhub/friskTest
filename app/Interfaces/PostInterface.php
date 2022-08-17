@@ -5,6 +5,12 @@ namespace App\Interfaces;
 use App\Models\Post;
 use Illuminate\Database\Eloquent\Collection;
 
+/**
+ * Basic interface
+ * No baseInterface, as only one required
+ * 
+ */
+
 interface PostInterface {
 
   // Get all Posts

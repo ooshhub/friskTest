@@ -1,9 +1,12 @@
+/**
+ * Left side navbar
+ *  
+ */
+
 import PropTypes from "prop-types";
 import { NavButton } from "../components/NavButton";
 
 export const NavBar = (props) => {
-
-  // const [activePage, setActivePage] = useState(props.defaultRoute);
 
   const handleNavClick = async ({ target }) => {
     const { url, page } = target?.dataset ?? {};
@@ -21,6 +24,7 @@ export const NavBar = (props) => {
         </div>
       </div>
       <div className="navbuttons">
+        {/* link & page should match setup in Layout.jsx */}
         <NavButton link="/api/createPost" page='create' active={props.currentPage} onNavClick={handleNavClick}>Create Post</NavButton>
         <NavButton link="/api/posts" page='list' active={props.currentPage} onNavClick={handleNavClick}>List Posts</NavButton>
         <NavButton link="/api/options" page='options' active={props.currentPage} onNavClick={handleNavClick}>Options</NavButton>

@@ -14,3 +14,8 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+xdebug.log
+*.log
+xdebug*.*
+**/*.log

@@ -1,0 +1,51 @@
+body {
+  & #app {
+
+    & .option-group {
+      text-align: left;
+      border: 1px solid var(--main-hightlight-2);
+      padding: 1rem;
+      margin: 1rem;
+      position: relative;
+      
+      &:not(:first-child) {
+        margin-top: 2rem;
+      }
+      & h4 {
+        margin: 0;
+        position: absolute;
+        top: -1.3rem;
+        left: 0.5rem;
+        background: var(--container-background);
+        width: max-content;
+        padding: 0.5rem;
+        font-style: italic;
+      }
+
+      & .option {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      & .label {
+        color: var(--text-faded);
+        margin: 0 1rem 0 0;
+        font-size: 1rem;
+      }
+
+      & .pixel {
+        opacity: 0;
+        height: 0px;
+        width: 0px;
+        z-index: -10;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      & .disabled {
+        pointer-events: none;
+        color: grey;
+      }
+    }
+  }
+}

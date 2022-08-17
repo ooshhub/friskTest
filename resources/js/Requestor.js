@@ -1,3 +1,10 @@
+/**
+ * Wrapper around axios to add in progress bar for API calls
+ * and general ease of use
+ * 
+ */
+
+
 import axios from 'axios';
 import { hexToHsl, verifyHex } from './colours';
 import { Helpers } from './helpers';

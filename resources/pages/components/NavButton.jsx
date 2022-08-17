@@ -1,8 +1,15 @@
+/**
+ * NavButton for left Navbar - page change handled in Layout.jsx
+ * 
+ */
+
 import PropTypes from 'prop-types';
 import { createElement, createRef, useEffect } from 'react';
 
 
 export const NavButton = (props) => {
+
+  console.log(props.active, props.page);
 
   const additionalClasses = props.classes?.split(/\s+/g),
     classList = ['nav-button', ...additionalClasses||[]];
@@ -10,7 +17,7 @@ export const NavButton = (props) => {
   const thisNavButton = createRef(null);
   useEffect(() => {
     if (thisNavButton) {
-      if (props.link === props.active) thisNavButton.current.classList.add('active');
+      if (props.page === props.active) thisNavButton.current.classList.add('active');
       else thisNavButton.current.classList.remove('active');
     }
   }, [props.active])

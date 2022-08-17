@@ -1,11 +1,14 @@
-// import { useEffect } from "react";
+/**
+ * List Posts page layout
+ * 
+ */
+
 import PropTypes from 'prop-types';
 import { PostTable } from "./containers/PostTable";
 
 export const List = (props) => {
 
-  console.log(props.pageData);
-
+  // console.log(props.pageData);
   const posts = props.pageData || [];
 
   return (

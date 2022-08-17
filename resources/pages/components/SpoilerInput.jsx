@@ -1,23 +1,28 @@
+/**
+ * Handle 'reveal' PIN popup for messages
+ * 
+ */
+
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
 
 export const SpoilerInput = (props) => {
 
-  // POST attempted PIN to retrieve message content
+  // POST attempted PIN to backend API to retrieve message content
   const revealMessage = async (ev) => {
     ev.preventDefault();
     const form = new FormData(ev.target);
     const formObject = Object.fromEntries(form.entries());
-    console.log(`Submitting PIN`, formObject);
     if (formObject && window.ooxios) {
       const response = await window.ooxios.postRequest({
         url: `/api/comment/${formObject.id}`,
         data: formObject,
       });
-      console.log(response?.data, response);
+      // Display validation error (bad PIN)
       if (response.data.error && validationRef.current) {
         validationRef.current.innerText = response.data.error;
       }
+      // Display message if received from backend
       else if (response.data.message && messageRef.current) {
         messageRef.current.innerHTML = response.data.message
         togglePinModal(false);
@@ -29,8 +34,17 @@ export const SpoilerInput = (props) => {
     messageRef = useRef(null),
     validationRef = useRef(null);
 
+  // Open/close a Reveal modal
   const togglePinModal = (show = true) => {
-    if (modalRef.current) modalRef.current.style.display = show ? 'block' : 'none';
+    if (modalRef.current) {
+      if (show) {
+        Array.from(document.querySelectorAll('.modal.pin-entry')).forEach(el => el.style.display = 'none');
+        modalRef.current.style.display = 'block';
+        modalRef.current.querySelector('input[name="pin"]')?.focus();
+      } else {
+        modalRef.current.style.display = 'none';
+      }
+    }
   }
 
   return (

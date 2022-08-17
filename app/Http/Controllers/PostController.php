@@ -10,6 +10,12 @@ use Illuminate\Support\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
+/**
+ * Main controller class for the app
+ * Inject => Repository for CRUD access
+ * Inject => Service for logic
+ */
+
 class PostController extends Controller
 {
 
@@ -44,9 +50,9 @@ class PostController extends Controller
     return $returnData;
   }
 
-  public function getPostSummary()//: JsonResponse
+  public function getPostSummary(): JsonResponse
   {
     $csvData = $this->postService->getMessageCountByEmail();
-    return $csvData->toJson(); //response()->json($csvData);
+    return $csvData->toJson();
   }
 }
