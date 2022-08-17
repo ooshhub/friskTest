@@ -5953,3 +5953,68 @@
 [2428] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
 [2428] Log closed at 2022-08-16 11:44:45.016097
 
+[8716] Log opened at 2022-08-17 02:05:59.013321
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] Log closed at 2022-08-17 02:06:00.240334
+
+[8716] Log opened at 2022-08-17 02:06:10.133696
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] Log closed at 2022-08-17 02:06:10.699490
+
+[8716] Log opened at 2022-08-17 02:08:31.095212
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] Log closed at 2022-08-17 02:08:34.559094
+
+[8716] Log opened at 2022-08-17 02:09:24.195771
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] Log closed at 2022-08-17 02:09:26.684775
+
+[8716] Log opened at 2022-08-17 02:09:40.245673
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] Log closed at 2022-08-17 02:09:42.806297
+
+[8716] Log opened at 2022-08-17 02:09:50.099223
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] Log closed at 2022-08-17 02:09:51.086530
+
+[8716] Log opened at 2022-08-17 02:10:30.043430
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[8716] [Step Debug] ERR: Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[8716] Log closed at 2022-08-17 02:10:31.200556
+

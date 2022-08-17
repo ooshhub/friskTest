@@ -7,13 +7,15 @@
   <link rel="icon" href="favicon.ico" />
   <title>friskTest</title>
   {{-- react preamble --}}
-  {{-- <script type="module">
-    import RefreshRuntime from 'http://localhost:5173/@react-refresh'
-    RefreshRuntime.injectIntoGlobalHook(window)
-    window.$RefreshReg$ = () => {}
-    window.$RefreshSig$ = () => (type) => type
-    window.__vite_plugin_react_preamble_installed__ = true
-  </script> --}}
+  @if (env('APP_ENV') != 'production')
+    <script type="module">
+      import RefreshRuntime from 'http://localhost:5173/@react-refresh'
+      RefreshRuntime.injectIntoGlobalHook(window)
+      window.$RefreshReg$ = () => {}
+      window.$RefreshSig$ = () => (type) => type
+      window.__vite_plugin_react_preamble_installed__ = true
+    </script>
+  @endif
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
